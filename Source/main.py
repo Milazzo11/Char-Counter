@@ -10,8 +10,16 @@ def sort(arr1, arr2):  # sorts arrays on alphabetical order
     return arr1, arr2
 
 
+data = ""
+
 f = open("input.txt", "r")
-data = f.read()
+
+for line in f:
+    try:
+        data += line
+    except:
+        pass
+
 f.close()
 # reads in file data
 
