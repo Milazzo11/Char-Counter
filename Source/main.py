@@ -10,7 +10,7 @@ def sort(arr1, arr2):  # sorts arrays on alphabetical order
     return arr1, arr2
 
 
-with open("input.txt", encoding="utf16", errors="surrogateescape") as f:
+with open("input.txt", encoding="utf8", errors="ignore") as f:
     data = f.read()
 
 char_list = []
