@@ -19,11 +19,14 @@ char_list = []
 count = []
 
 for char in data.upper():  # iterates through file data and counts characters
-    if char in char_list:
-        count[char_list.index(char)] += 1
-    else:
-        char_list.append(char)
-        count.append(1)
+    try:
+        if char in char_list:
+            count[char_list.index(char)] += 1
+        else:
+            char_list.append(char)
+            count.append(1)
+    except:
+        pass
 
 char_list, count = sort(char_list, count)
 # sorts data
